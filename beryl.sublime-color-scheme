@@ -1,0 +1,577 @@
+{
+  "name": "Beryl",
+
+  "variables": {
+    "amber-500": "#FFC107",
+    "blue-400": "#42A5F5",
+    "deeporange-400": "#FF7043",
+    "deeporange-A200": "#FF6E40",
+    "deeppurple-A200": "#7C4DFF",
+    "green-400": "#66BB6A",
+    "green-A400": "#00E676",
+    "green-A700": "#00C853",
+    "indigo-400": "#5C6BC0",
+    "lightblue-400": "#29B6F6",
+    "lightgreen-400": "#9CCC65",
+    "lightgreen-500": "#8BC34A",
+    "orange-400": "#FFA726",
+    "orange-A200": "#FFAB40",
+    "pink-400": "#EC407A",
+    "purple-400": "#AB47BC",
+    "purple-500": "#9C27B0",
+    "purple-A200": "#E040FB",
+    "red-400": "#EF5350",
+    "red-A200": "#FF5252",
+    "red-A400": "#FF1744",
+    "teal-400": "#26A69A",
+    "yellow-400": "#FFEE58",
+
+    "gray-50": "#FAFAFA",
+    "gray-100": "#F5F5F5",
+    "gray-200": "#EEEEEE",
+    "gray-300": "#E0E0E0",
+    "gray-400": "#BDBDBD",
+    "gray-500": "#9E9E9E",
+    "gray-600": "#757575",
+    "gray-700": "#616161",
+    "gray-800": "#424242",
+    "gray-900": "#212121",
+
+    "black": "#000000",
+  },
+
+  "globals": {
+    "background": "var(gray-900)",
+    "foreground": "var(gray-50)",
+    "caret": "var(gray-200)",
+    "line_highlight": "var(gray-800)",
+
+    "misspelling": "var(red-A400)",
+    "fold_marker": "var(gray-100)",
+    "minimap_border": "var(gray-100)",
+    "accent": "var(gray-100)",
+
+    // "popup_css": "",
+    // "phantom_css": "",
+
+    "gutter": "var(gray-900)",
+    "gutter_foreground": "var(gray-600)",
+
+    "selection": "color(var(gray-700) alpha(0.66))",
+    // "selection_foreground": "color(var(gray-50) alpha(0.9))",
+    "selection_border": "color(var(gray-50) alpha(0.33))",
+    "selection_border_width": "1",
+    "inactive_selection": "color(var(gray-700) alpha(0.66))",
+    "inactive_selection_foreground": "var(gray-50)",
+    "selection_corner_style": "round",
+    "selection_corner_radius": "2",
+
+    "highlight": "color(var(gray-100) alpha(0.66))",
+    "find_highlight": "var(gray-700)",
+    "find_highlight_foreground": "var(gray-50)",
+
+    "guide": "var(gray-800)",
+    "active_guide": "var(gray-500)",
+    "stack_guide": "var(gray-500)",
+
+    "brackets_options": "underline",
+    "brackets_foreground": "color(var(gray-100) alpha(0.66))",
+    "bracket_contents_options": "underline",
+    "bracket_contents_foreground": "color(var(gray-100) alpha(0.66))",
+
+    "tags_options": "stippled_underline",
+    "tags_foreground": "color(var(gray-100) alpha(0.66))",
+
+    // "shadow": "color(var(black) alpha(0.66))",
+    // "shadow_width": "8",
+  },
+
+  "rules": [
+    // Global rules
+    {
+      "name": "Comment",
+      "scope": "comment",
+      "foreground": "var(gray-600)",
+      "font_style": "italic",
+    },
+
+    {
+      "name": "String",
+      "scope": "string",
+      "foreground": "var(gray-400)",
+    },
+
+    {
+      "name": "Number",
+      "scope": "constant.numeric",
+      "foreground": "var(amber-500)",
+    },
+
+    {
+      "name": "Constant Built-in",
+      "scope": "constant.language",
+      "foreground": "var(purple-400)",
+    },
+
+    {
+      "name": "Constant User-Defined",
+      "scope": "constant.character, constant.other",
+      "foreground": "var(purple-A200)",
+    },
+
+    {
+      "name": "Variable",
+      "scope": "variable.language",
+      "foreground": "var(orange-400)",
+    },
+
+    {
+      "name": "Keyword",
+      "scope": "keyword",
+      "foreground": "var(red-A200)",
+    },
+
+    {
+      "name": "Storage",
+      "scope": "storage",
+      "foreground": "var(deeporange-400)",
+    },
+
+    {
+      "name": "Storage type",
+      "scope": "storage.type",
+      "foreground": "var(blue-400)",
+    },
+
+    {
+      "name": "Class name",
+      "scope": "entity.name.class",
+      "foreground": "var(green-A400)",
+      "font_style": "bold",
+    },
+
+    {
+      "name": "Inherited class",
+      "scope": "entity.other.inherited-class",
+      "foreground": "var(green-400)",
+      "font_style": "bold",
+    },
+
+    {
+      "name": "Function name",
+      "scope": "entity.name.function",
+      "foreground": "var(green-A700)",
+    },
+
+    {
+      "name": "Function argument",
+      "scope": "variable.parameter",
+      "foreground": "var(orange-400)",
+      "font_style": "italic",
+    },
+
+    {
+      "name": "Tag name",
+      "scope": "entity.name.tag",
+      "foreground": "var(deeporange-400)",
+    },
+
+    {
+      "name": "Tag attribute",
+      "scope": "entity.other.attribute-name",
+      "foreground": "var(green-400)",
+    },
+
+    {
+      "name": "Library function",
+      "scope": "support.function",
+      "foreground": "var(lightgreen-400)",
+    },
+
+    {
+      "name": "Library constant",
+      "scope": "support.constant",
+      "foreground": "var(lightgreen-500)",
+    },
+
+    {
+      "name": "Library class/type",
+      "scope": "support.class, support.type",
+      "foreground": "var(amber-500)",
+    },
+
+    {
+      "name": "Library variable",
+      "scope": "support.other.variable",
+      "foreground": "var(purple-500)",
+    },
+
+    {
+      "name": "String constant",
+      "scope": "string.constant",
+      "foreground": "var(deeppurple-A200)",
+    },
+
+    {
+      "name": "String regexp",
+      "scope": "string.regexp",
+      "foreground": "var(orange-A200)",
+    },
+
+    {
+      "name": "String variable",
+      "scope": "string.variable",
+      "foreground": "var(gray-50)",
+    },
+
+    {
+      "name": "String value",
+      "scope": "string.quoted",
+      "foreground": "var(green-A700)",
+    },
+
+    {
+      "name": "Variable punctuation",
+      "scope": "punctuation.definition.variable",
+      "foreground": "var(gray-50)",
+    },
+
+    {
+      "name": "Entity",
+      "scope": "entity",
+      "foreground": "var(gray-100)",
+    },
+
+    {
+      "name": "Property name",
+      "scope": "support.type.property-name",
+      "foreground": "var(blue-400)",
+    },
+
+    {
+      "name": "Invalid deprecated",
+      "scope": "invalid.deprecated",
+      "background": "var(purple-A200)",
+      "foreground": "var(gray-200)",
+    },
+
+    // Content-specific rules
+    {
+      "name": "Braces",
+      "scope": "meta.brace",
+      "foreground": "var(gray-300)",
+    },
+
+    {
+      "name": "Diff header",
+      "scope": "meta.diff, meta.diff.header",
+      "foreground": "var(gray-100)",
+      "font_style": "italic",
+    },
+
+    {
+      "name": "Diff ignored",
+      "scope": "markup.ignored",
+      "foreground": "var(gray-600)",
+      "font_style": "italic",
+    },
+
+    {
+      "name": "Diff untracked",
+      "scope": "markup.untracked",
+      "foreground": "var(gray-500)",
+      "font_style": "italic",
+    },
+
+    {
+      "name": "Diff deleted",
+      "scope": "markup.deleted",
+      "foreground": "var(red-400)",
+    },
+
+    {
+      "name": "Diff inserted",
+      "scope": "markup.inserted",
+      "foreground": "var(green-400)",
+    },
+
+    {
+      "name": "Diff changed",
+      "scope": "markup.changed",
+      "foreground": "var(lightblue-400)",
+    },
+
+    {
+      "name": "Diff range",
+      "scope": "meta.diff.range",
+      "foreground": "var(purple-400)",
+    },
+
+    // Language-specific rules
+    {
+      "name": "JSON Key nesting 0",
+      "scope": "source.json meta.mapping.key.json string.quoted.double.json - meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(red-400)",
+    },
+
+    {
+      "name": "JSON Array nesting 0",
+      "scope": "source.json meta.sequence.json string.quoted.double.json - meta meta.sequence.json string.quoted.double.json",
+      "foreground": "var(red-400)",
+    },
+
+    {
+      "name": "JSON Key nesting 1",
+      "scope": "source.json meta meta.mapping.key.json string.quoted.double.json - meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(deeporange-400)",
+    },
+
+    {
+      "name": "JSON Array nesting 1",
+      "scope": "source.json meta meta.sequence.json string.quoted.double.json - meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(deeporange-400)",
+    },
+
+    {
+      "name": "JSON Key nesting 2",
+      "scope": "source.json meta meta meta.mapping.key.json string.quoted.double.json - meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(yellow-400)",
+    },
+
+    {
+      "name": "JSON Array nesting 2",
+      "scope": "source.json meta meta meta.sequence.json string.quoted.double.json - meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(yellow-400)",
+    },
+
+    {
+      "name": "JSON Key nesting 3",
+      "scope": "source.json meta meta meta meta.mapping.key.json string.quoted.double.json - meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(lightgreen-400)",
+    },
+
+    {
+      "name": "JSON Array nesting 3",
+      "scope": "source.json meta meta meta meta.sequence.json string.quoted.double.json - meta meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(lightgreen-400)",
+    },
+
+    {
+      "name": "JSON Key nesting 4",
+      "scope": "source.json meta meta meta meta meta.mapping.key.json string.quoted.double.json - meta meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(teal-400)",
+    },
+
+    {
+      "name": "JSON Array nesting 4",
+      "scope": "source.json meta meta meta meta meta.sequence.json string.quoted.double.json - meta meta meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(teal-400)",
+    },
+
+    {
+      "name": "JSON Key nesting 5",
+      "scope": "source.json meta meta meta meta meta meta.mapping.key.json string.quoted.double.json - meta meta meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(blue-400)",
+    },
+
+    {
+      "name": "JSON Array nesting 5",
+      "scope": "source.json meta meta meta meta meta meta.sequence.json string.quoted.double.json - meta meta meta meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(blue-400)",
+    },
+
+    {
+      "name": "JSON Key nesting 6",
+      "scope": "source.json meta meta meta meta meta meta meta.mapping.key.json string.quoted.double.json - meta meta meta meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(indigo-400)",
+    },
+
+    {
+      "name": "JSON Array nesting 6",
+      "scope": "source.json meta meta meta meta meta meta meta.sequence.json string.quoted.double.json - meta meta meta meta meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(indigo-400)",
+    },
+
+    {
+      "name": "JSON Key nesting 7",
+      "scope": "source.json meta meta meta meta meta meta meta meta.mapping.key.json string.quoted.double.json - meta meta meta meta meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(purple-400)",
+    },
+
+    {
+      "name": "JSON Array nesting 7",
+      "scope": "source.json meta meta meta meta meta meta meta meta.sequence.json string.quoted.double.json - meta meta meta meta meta meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(purple-400)",
+    },
+
+    {
+      "name": "JSON Key nesting 8",
+      "scope": "source.json meta meta meta meta meta meta meta meta meta.mapping.key.json string.quoted.double.json - meta meta meta meta meta meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(pink-400)",
+    },
+
+    {
+      "name": "JSON Array nesting 8",
+      "scope": "source.json meta meta meta meta meta meta meta meta meta.sequence.json string.quoted.double.json - meta meta meta meta meta meta meta meta meta meta.mapping.value.json string.quoted.double.json",
+      "foreground": "var(pink-400)",
+    },
+
+    {
+      "name": "Markdown Header",
+      "scope": "text meta markup.heading.markdown entity.name.section.markdown",
+      "foreground": "var(green-A700)",
+    },
+
+    {
+      "name": "Markdown Header hash",
+      "scope": "text meta markup.heading punctuation.definition.heading.begin.markdown",
+      "foreground": "var(red-A200)",
+    },
+
+    {
+      "name": "Markdown Header 1",
+      "scope": "text meta markup.heading.1.markdown entity.name.section.markdown",
+      "foreground": "var(red-400)",
+    },
+
+    {
+      "name": "Markdown Header 2",
+      "scope": "text meta markup.heading.2.markdown entity.name.section.markdown",
+      "foreground": "var(orange-400)",
+    },
+
+    {
+      "name": "Markdown Header 3",
+      "scope": "text meta markup.heading.3.markdown entity.name.section.markdown",
+      "foreground": "var(teal-400)",
+    },
+
+    {
+      "name": "Markdown Header 4",
+      "scope": "text meta markup.heading.4.markdown entity.name.section.markdown",
+      "foreground": "var(indigo-400)",
+    },
+
+    {
+      "name": "Markdown List character",
+      "scope": "markup.list.numbered.bullet.markdown, punctuation.definition.list_item.markdown",
+      "foreground": "var(gray-600)",
+    },
+
+    {
+      "name": "Markdown Backtick",
+      "scope": "markup.raw.inline.markdown",
+      "foreground": "var(deeporange-A200)",
+    },
+
+    {
+      "name": "Markdown Code fence",
+      "scope": "punctuation.definition.raw.code-fence.begin.markdown, punctuation.definition.raw.code-fence.end.markdown",
+      "foreground": "var(purple-A200)",
+    },
+
+    {
+      "name": "Markdown Table separator",
+      "scope": "punctuation.section.table-header.markdown, punctuation.separator.table-cell.markdown",
+      "foreground": "var(gray-600)",
+    },
+
+    {
+      "name": "HTML Doctype",
+      "scope": "entity.name.tag.doctype.html",
+      "foreground": "var(gray-600)",
+    },
+
+    {
+      "name": "HTML Block comment",
+      "scope": "comment.block.html",
+      "foreground": "var(gray-600)",
+    },
+
+    {
+      "name": "HTML Script tag",
+      "scope": "entity.name.tag.script.html",
+      "foreground": "var(blue-400)",
+      "font_style": "italic",
+    },
+
+    {
+      "name": "HTML Attribute",
+      "scope": "text.html.basic entity.other.attribute-name.html",
+      "foreground": "var(green-400)",
+    },
+
+    {
+      "name": "HTML Quotation mark",
+      "scope": "string.quoted.html punctuation.string.html",
+      "foreground": "var(green-400)",
+    },
+
+    {
+      "name": "XML Tag punctuation",
+      "scope": "punctuation.definition.tag",
+      "foreground": "var(deeporange-A200)",
+    },
+
+    {
+      "name": "Handlebars variable",
+      "scope": "variable.parameter.handlebars",
+      "foreground": "var(orange-400)",
+      "font_style": "italic",
+    },
+
+    {
+      "name": "Handlebars constant",
+      "scope": "support.constant.handlebars",
+      "foreground": "var(purple-400)",
+    },
+
+    {
+      "name": "CSS At-rule",
+      "scope": "keyword.control.at-rule",
+      "foreground": "var(red-A200)",
+    },
+
+    {
+      "name": "CSS Braces",
+      "scope": "punctuation.section.property-list.css",
+      "foreground": "var(gray-300)",
+    },
+
+    {
+      "name": "CSS Tag punctuation",
+      "scope": "punctuation.definition.tag.css",
+      "foreground": "var(deeporange-400)",
+    },
+
+    {
+      "name": "CSS Separator",
+      "scope": "punctuation.separator.key-value.css",
+      "foreground": "var(gray-300)",
+    },
+
+    {
+      "name": "CSS Pseudo selector",
+      "scope": "entity.other.pseudo-element.css, entity.other.pseudo-class.css, entity.other.pseudo-selector.css",
+      "foreground": "var(lightgreen-400)",
+    },
+
+    {
+      "name": "ID attribute name",
+      "scope": "entity.other.attribute-name.id",
+      "foreground": "var(orange-400)",
+    },
+
+    {
+      "name": "Class attribute name",
+      "scope": "entity.other.attribute-name.class",
+      "foreground": "var(green-400)",
+    },
+
+    // {
+    //   "name": "",
+    //   "scope": "",
+    //   "foreground": "",
+    // },
+  ],
+}
