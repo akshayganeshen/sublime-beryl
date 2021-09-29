@@ -1,0 +1,53 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: OpenAPI YAML Example
+  license:
+    name: MIT
+
+servers:
+  - url: /v1
+
+paths:
+
+  /users:
+    get:
+      summary: List all users
+      operationId: listUsersV1
+      tags:
+        - users
+      responses:
+        "200":
+          description: User listing
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/v1.Users"
+        default:
+          description: Error while fetching users
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/v1.Error"
+
+components:
+
+  schemas:
+
+    v1.Users:
+      type: array
+      items:
+        type: object
+        required:
+          - name
+        properties:
+          name:
+            type: string
+
+    v1.Error:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
