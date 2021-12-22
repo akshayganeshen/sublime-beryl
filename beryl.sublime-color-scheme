@@ -477,6 +477,18 @@
     },
 
     {
+      "name": "Markdown Italics",
+      "scope": "markup.italic.markdown",
+      "font_style": "italic",
+    },
+
+    {
+      "name": "Markdown Emphasis",
+      "scope": "markup.bold.markdown",
+      "font_style": "bold",
+    },
+
+    {
       "name": "HTML Doctype",
       "scope": "entity.name.tag.doctype.html",
       "foreground": "var(gray-600)",
