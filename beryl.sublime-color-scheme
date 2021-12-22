@@ -418,37 +418,37 @@
 
     {
       "name": "Markdown Header",
-      "scope": "text meta markup.heading.markdown entity.name.section.markdown",
+      "scope": "markup.heading.markdown entity.name.section.markdown",
       "foreground": "var(green-A700)",
     },
 
     {
       "name": "Markdown Header hash",
-      "scope": "text meta markup.heading punctuation.definition.heading.begin.markdown",
+      "scope": "markup.heading punctuation.definition.heading.begin.markdown",
       "foreground": "var(red-A200)",
     },
 
     {
       "name": "Markdown Header 1",
-      "scope": "text meta markup.heading.1.markdown entity.name.section.markdown",
+      "scope": "markup.heading.1.markdown entity.name.section.markdown",
       "foreground": "var(red-400)",
     },
 
     {
       "name": "Markdown Header 2",
-      "scope": "text meta markup.heading.2.markdown entity.name.section.markdown",
+      "scope": "markup.heading.2.markdown entity.name.section.markdown",
       "foreground": "var(orange-400)",
     },
 
     {
       "name": "Markdown Header 3",
-      "scope": "text meta markup.heading.3.markdown entity.name.section.markdown",
+      "scope": "markup.heading.3.markdown entity.name.section.markdown",
       "foreground": "var(teal-400)",
     },
 
     {
       "name": "Markdown Header 4",
-      "scope": "text meta markup.heading.4.markdown entity.name.section.markdown",
+      "scope": "markup.heading.4.markdown entity.name.section.markdown",
       "foreground": "var(indigo-400)",
     },
 
